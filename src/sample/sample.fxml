@@ -1,0 +1,20 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<GridPane fx:controller="sample.SampleController"
+          stylesheets="/sample/sample.css"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+    <Button text="Say 'Hello World'" onAction="#sayHelloWorld" translateX="1" translateY="10"/>
+    <Label GridPane.rowIndex="1" GridPane.columnIndex="1" fx:id="helloWorld"/>
+
+    <Button text="Press Me 1" onAction="#incrementScore" translateX="1" translateY="40"/>
+    <Label GridPane.rowIndex="2" GridPane.columnIndex="1" fx:id="incrementS"/>
+
+    <Button text="Press Me 2" onAction="#incrementScoreBy2" translateX="1" translateY="70" />
+    <Label GridPane.rowIndex="3" GridPane.columnIndex="1" fx:id="incrementS2"/>
+
+    <Button text="Press Me 3" onAction="#incrementScoreBy3" translateX="1" translateY="100" />
+    <Label GridPane.rowIndex="4" GridPane.columnIndex="1" fx:id="incrementS3"/>
+</GridPane>
