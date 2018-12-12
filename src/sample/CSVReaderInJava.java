@@ -12,7 +12,7 @@ import java.util.List;
 public class CSVReaderInJava {
 
     public static void main(String... args) {
-        List<Book> books = readBooksFromCSV("book.txt");
+        List<Book> books = readBooksFromCSV("src/books.txt");
 
         // let's print all the person read from CSV file
         for (Book b : books) {
@@ -26,8 +26,7 @@ public class CSVReaderInJava {
 
         // create an instance of BufferedReader
         // using try with resource, Java 7 feature to close resources
-        try (BufferedReader br = Files.newBufferedReader(pathToFile,
-                StandardCharsets.US_ASCII)) {
+        try (BufferedReader br = Files.newBufferedReader(pathToFile, StandardCharsets.US_ASCII)) {
 
             // read the first line from the text file
             String line = br.readLine();
